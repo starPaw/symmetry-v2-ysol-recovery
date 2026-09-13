@@ -1,0 +1,22 @@
+{
+  "name": "symmetry-v2-ysol-recovery",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Simulation-first atomic recovery tool for legacy Symmetry V2 YSOL positions on Solana",
+  "scripts": {
+    "postinstall": "node scripts/patch-legacy-sdk.mjs",
+    "simulate": "node withdraw-ysol-atomic.mjs",
+    "execute": "node withdraw-ysol-atomic.mjs --execute"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@metaplex-foundation/js": "0.20.1",
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.3",
+    "@symmetry-hq/funds-sdk": "0.1.80",
+    "bn.js": "^5.2.1"
+  }
+}
